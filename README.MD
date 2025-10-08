@@ -12,7 +12,7 @@ A Python implementation of a distributed key-value store featuring consistent ha
 - ✅ **CLI Client** - easy-to-use command-line interface
 
 ## Project Structure
-'''
+```
 distributed_kv_store/
 ├── 📄 COMPLETE_PROJECT_SUBMISSION.md     (Main submission document)
 ├── 📁 src/                               (Source code)
@@ -24,4 +24,5 @@ distributed_kv_store/
 ├── 📄 project_output.txt                 (Demo output)
 ├── 📄 README.md
 └── 📄 requirements.txt
-'''
+```
+
