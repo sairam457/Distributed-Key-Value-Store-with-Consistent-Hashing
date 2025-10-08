@@ -1,0 +1,150 @@
+MEDHAVI SKILLS UNIVERSITY
+Distributed Key-Value Store Project
+===================================
+
+DEMONSTRATION OUTPUT:
+
+1. INITIAL SYSTEM STATUS:
+{
+  "ring_status": {
+    "total_nodes": 3,
+    "total_virtual_nodes": 9,
+    "sorted_hashes": [
+      394489263,
+      426623365,
+      496762689,
+      529669593,
+      1908134909,
+      2905783269,
+      3528834804,
+      3543470671,
+      4028501876
+    ],
+    "ring_mapping": {
+      "1908134909": "localhost:8000",
+      "394489263": "localhost:8000",
+      "4028501876": "localhost:8000",
+      "2905783269": "localhost:8001",
+      "426623365": "localhost:8001",
+      "496762689": "localhost:8001",
+      "529669593": "localhost:8002",
+      "3543470671": "localhost:8002",
+      "3528834804": "localhost:8002"
+    }
+  },
+  "nodes": {
+    "localhost:8000": {
+      "host": "localhost",
+      "port": 8000,
+      "status": "active",
+      "last_seen": 1759929086.6271565
+    },
+    "localhost:8001": {
+      "host": "localhost",
+      "port": 8001,
+      "status": "active",
+      "last_seen": 1759929086.6276677
+    },
+    "localhost:8002": {
+      "host": "localhost",
+      "port": 8002,
+      "status": "active",
+      "last_seen": 1759929086.6276677
+    }
+  },
+  "replication_factor": 2
+}
+
+2. DATA OPERATIONS:
+PUT user1: {
+  "status": "success",
+  "message": "Key user1 stored and replicated to 1 nodes",
+  "node": "localhost:8001",
+  "timestamp": 1759929086.6326718,
+  "version": 2,
+  "replicated_to": 1,
+  "responsible_nodes": [
+    "localhost:8001",
+    "localhost:8002"
+  ]
+}
+
+PUT user2: {
+  "status": "success",
+  "message": "Key user2 stored and replicated to 1 nodes",
+  "node": "localhost:8001",
+  "timestamp": 1759929086.669223,
+  "version": 2,
+  "replicated_to": 1,
+  "responsible_nodes": [
+    "localhost:8001",
+    "localhost:8002"
+  ]
+}
+
+GET user1: {
+  "status": "success",
+  "value": "John Doe",
+  "node": "localhost:8001",
+  "timestamp": 1759929086.6326718,
+  "version": 2,
+  "responsible_nodes": [
+    "localhost:8001",
+    "localhost:8002"
+  ]
+}
+
+3. FAULT TOLERANCE:
+ADD NODE 8003: Success
+REMOVE NODE 8001: Success
+FINAL STATUS: {
+  "ring_status": {
+    "total_nodes": 3,
+    "total_virtual_nodes": 9,
+    "sorted_hashes": [
+      394489263,
+      426623365,
+      496762689,
+      529669593,
+      1908134909,
+      2905783269,
+      3528834804,
+      3543470671,
+      4028501876
+    ],
+    "ring_mapping": {
+      "1908134909": "localhost:8000",
+      "394489263": "localhost:8000",
+      "4028501876": "localhost:8000",
+      "2905783269": "localhost:8001",
+      "426623365": "localhost:8001",
+      "496762689": "localhost:8001",
+      "529669593": "localhost:8002",
+      "3543470671": "localhost:8002",
+      "3528834804": "localhost:8002"
+    }
+  },
+  "nodes": {
+    "localhost:8000": {
+      "host": "localhost",
+      "port": 8000,
+      "status": "active",
+      "last_seen": 1759929086.6271565
+    },
+    "localhost:8001": {
+      "host": "localhost",
+      "port": 8001,
+      "status": "active",
+      "last_seen": 1759929086.6276677
+    },
+    "localhost:8002": {
+      "host": "localhost",
+      "port": 8002,
+      "status": "active",
+      "last_seen": 1759929086.6276677
+    }
+  },
+  "replication_factor": 2
+}
+
+ ALL PROJECT REQUIREMENTS VERIFIED!

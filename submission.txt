@@ -1,0 +1,78 @@
+PROJECT OUTPUT
+==============
+{
+  "ring_status": {
+    "total_nodes": 3,
+    "total_virtual_nodes": 9,
+    "sorted_hashes": [
+      394489263,
+      426623365,
+      496762689,
+      529669593,
+      1908134909,
+      2905783269,
+      3528834804,
+      3543470671,
+      4028501876
+    ],
+    "ring_mapping": {
+      "1908134909": "localhost:8000",
+      "394489263": "localhost:8000",
+      "4028501876": "localhost:8000",
+      "2905783269": "localhost:8001",
+      "426623365": "localhost:8001",
+      "496762689": "localhost:8001",
+      "529669593": "localhost:8002",
+      "3543470671": "localhost:8002",
+      "3528834804": "localhost:8002"
+    }
+  },
+  "nodes": {
+    "localhost:8000": {
+      "host": "localhost",
+      "port": 8000,
+      "status": "active",
+      "last_seen": 1759929108.1999834
+    },
+    "localhost:8001": {
+      "host": "localhost",
+      "port": 8001,
+      "status": "active",
+      "last_seen": 1759929108.1999834
+    },
+    "localhost:8002": {
+      "host": "localhost",
+      "port": 8002,
+      "status": "active",
+      "last_seen": 1759929108.1999834
+    }
+  },
+  "replication_factor": 2
+}
+
+PUT TEST:
+{
+  "status": "success",
+  "message": "Key test stored and replicated to 1 nodes",
+  "node": "localhost:8000",
+  "timestamp": 1759929108.1999834,
+  "version": 1,
+  "replicated_to": 1,
+  "responsible_nodes": [
+    "localhost:8000",
+    "localhost:8001"
+  ]
+}
+
+GET TEST:
+{
+  "status": "success",
+  "value": "value",
+  "node": "localhost:8000",
+  "timestamp": 1759929108.1999834,
+  "version": 1,
+  "responsible_nodes": [
+    "localhost:8000",
+    "localhost:8001"
+  ]
+}

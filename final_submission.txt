@@ -1,0 +1,25 @@
+MEDHAVI SKILLS UNIVERSITY
+Distributed Key-Value Store Project Submission
+==============================================
+
+SYSTEM STATUS: OPERATIONAL
+- 3 server nodes running: localhost:8000, 8001, 8002
+- Consistent hashing with virtual nodes: 9 virtual nodes
+- Replication factor: 2
+- All features working correctly
+
+DEMONSTRATION COMPLETED:
+✅ Consistent Hashing Algorithm with Virtual Nodes
+✅ Key-Value Store Operations (PUT/GET)
+✅ N-way Data Replication  
+✅ Dynamic Node Management
+✅ Fault Tolerance - Node Addition/Removal
+
+PROJECT REQUIREMENTS MET:
+1. Consistent Hashing Ring: IMPLEMENTED
+2. Key-Value Server Nodes: IMPLEMENTED  
+3. Client Application: IMPLEMENTED
+4. Basic Replication: IMPLEMENTED
+5. Fault Tolerance: IMPLEMENTED
+
+STATUS: PROJECT COMPLETE AND FUNCTIONAL

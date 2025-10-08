@@ -1,0 +1,4 @@
+# Distributed Key-Value Store
+# No external dependencies required - uses Python standard library only
+
+# Python 3.7+ required for typing features
